@@ -1,0 +1,43 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12600\viewh9600\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs34 \cf0 1. data:\
+	DEG(mm: 9, fish: 6, bee: 3), Acc (sub set of cone (regions + timepoint)), genome\
+2. common in intruder \
+\
+analysis:\
+1. DEG enrich in oath (same gene become DEG)  (1week)\
+	every pair of DEG (up+down) from diff spe (all permutation pairing)\
+\
+	s1			s2\
+	DEG    orth	DEG\
+\
+orth(can be many-to-many)\
+enrich on #edges on DEG\
+randomly sample 10,000, find the rank of our DEG set (each pair of spe and each pair of cond)\
+	\
+save intermediate files (show historgram)\
+\
+2. clustering on network (gene nodes + co-expression edges, no DEG set) (1week)\
+\
+GO1: individual spe p-values vs new clus method pvalue (strongest p-value indicates strong cross spe common pattern in a GO)\
+\
+ask Michael for WGCNA clusters\
+\
+3. DEG set related to common features (2week)\
+GO + pathway + co-expression network\
+random walk on graph, find neighbor nodes\
+\
+4. trends of transcription (shape of GOs of DEGs where x: order, y: expression) to find out genes that have temporal patterns\
+\
+5. are DEVs next to the same genes in DEG sets (gene territory) (Dave)\
+repeat analysis on list of DEV genes (similar to DEG)\
+\
+6. signif enrichment on DEGs and Acc (Laura)\
+\
+7. conservation of regulation  (Laura)\
+motif enrichment test on each spe\
+}
