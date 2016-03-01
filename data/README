@@ -1,0 +1,1 @@
+sshfs weiyang4@biocluster.igb.uiuc.edu:/home/n-z/weiyang4/simons/Wei/Social_Challenge/data_output/Orthologous ./vm_igb  -ocache=no -onolocalcaches -ovolname=ssh
