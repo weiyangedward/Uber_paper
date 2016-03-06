@@ -1,0 +1,54 @@
+This degEnrich.cpp uses regex to do pattern matching, which needs to be compiled using clang++. In g++, this library is incomplete.
+
+## To compile:
+clang++ degEnrich.cpp -std=c++11 -o degEnrich
+
+## Test case:
+./degEnrich test_case/degs/ test_case/deg_list test_case/orth_group test_case/hb_universe test_case/mm_universe test_case/sb_universe 2>test_log > test_out
+
+## Test case comes to be extremely important to ensure the correctness of code,
+## in this test case, there are designed files as input:
+
+./degs: a dir contains deg files from hb, mm and sb
+	1) hb: GB001, GB002
+	2) mm: ENSMUSG001, ENSMUSG002
+	3) sb: ENSGACG001, ENSGACG002
+./deg_list: list of deg files in './degs': 
+	1) hb_deg_1, mm_deg_1, sb_deg_1
+./orth_group: contains orth group between hb, mm and sb
+	1) OG001	GB001;GB002	ENSMUSG001;ENSMUSG002	ENSGACG001
+./hb_universe: universe gene set of hb
+	1) GB001, GB002, GB003, GB004, GB005
+./mm_universe: universe gene set of mm
+	1) ENSMUSG001, ENSMUSG002, ENSMUSG003, ENSMUSG004, ENSMUSG005
+./sb_universe: universe gene set of sb
+	1) ENSGACG001, ENSGACG002, ENSGACG003, ENSGACG004, ENSGACG005
+
+## Given this test case, it is clear that DEG set hb_deg_1 and mm_deg_1 have 4 orth edges, hb_deg_1 and sb_deg_1 have 2, mm_deg_1 and sb_deg_1 have 2
+## This is consistent with the log and output:
+
+../test_log:
+0 universe size 5
+1 universe size 5
+2 universe size 5
+orig orth hb_deg_1 mm_deg_1 count 4
+orig orth hb_deg_1 sb_deg_1 count 2
+orig orth mm_deg_1 sb_deg_1 count 2
+deg pair 0: 0 0 0 0 1 1 1 2 2 2
+deg pair 1: 0 0 0 0 0 0 0 0 0 2
+deg pair 2: 0 0 0 0 0 0 0 1 1 1
+
+../test_out:
+rank of deg_pair hb_deg_1 mm_deg_1 is 0
+rank of deg_pair hb_deg_1 sb_deg_1 is 1
+rank of deg_pair mm_deg_1 sb_deg_1 is 0
+
+## How to run:
+
+## 100 permutation
+./degEnrich ../../data/DEGsets/degs_for_wei/ ../../data/DEGsets/deg_list.txt ../../data/OrthGroups/orthodb_triplets.txt ../../data/UniverseGene/hb_mrsb_no_DWV_cor_uniq.txt ../../data/UniverseGene/mm_mrsb_A_cor_test.txt ../../data/UniverseGene/sb_mrsb_D_cor_uniq.txt 100 2>log_100 > out_100 &
+
+## 1000 permutation
+./degEnrich ../../data/DEGsets/degs_for_wei/ ../../data/DEGsets/deg_list.txt ../../data/OrthGroups/orthodb_triplets.txt ../../data/UniverseGene/hb_mrsb_no_DWV_cor_uniq.txt ../../data/UniverseGene/mm_mrsb_A_cor_test.txt ../../data/UniverseGene/sb_mrsb_D_cor_uniq.txt 1000 2>log_1000 > out_1000 &
+
+./degEnrich ../../data/DEGsets/degs_for_wei/ ../../data/DEGsets/deg_list.txt ../../data/OrthGroups/orthodb_triplets.txt ../../data/UniverseGene/hb_mrsb_no_DWV_cor_uniq.txt ../../data/UniverseGene/mm_mrsb_A_cor_test.txt ../../data/UniverseGene/sb_mrsb_D_cor_uniq.txt 10000 2>log_10000 > out_10000 &

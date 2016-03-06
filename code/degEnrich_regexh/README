@@ -1,0 +1,4 @@
+This degEnrich.cpp uses regex.h to perform pattern matching, which can be compiled with g++.
+
+## To compile:
+g++ degEnrich.cpp -O3 -o degEnrich -Wno-deprecated -std=c++0x

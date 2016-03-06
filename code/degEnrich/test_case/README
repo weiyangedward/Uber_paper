@@ -1,0 +1,24 @@
+This is a test case for degEnrich code.
+
+./degs: a dir contains deg files from hb, mm and sb
+./deg_list: list of deg files in './degs'
+./orth_group: contains orth group between hb, mm and sb
+./hb_universe: universe gene set of hb
+./mm_universe: universe gene set of mm
+./sb_universe: universe gene set of sb
+
+../test_log:
+0 universe size 5
+1 universe size 5
+2 universe size 5
+orig orth hb_deg_1 mm_deg_1 count 4
+orig orth hb_deg_1 sb_deg_1 count 2
+orig orth mm_deg_1 sb_deg_1 count 2
+deg pair 0: 0 0 0 0 1 1 1 2 2 2
+deg pair 1: 0 0 0 0 0 0 0 0 0 2
+deg pair 2: 0 0 0 0 0 0 0 1 1 1
+
+../test_out:
+rank of deg_pair hb_deg_1 mm_deg_1 is 0
+rank of deg_pair hb_deg_1 sb_deg_1 is 1
+rank of deg_pair mm_deg_1 sb_deg_1 is 0

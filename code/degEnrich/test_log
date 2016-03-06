@@ -1,0 +1,9 @@
+0 universe size 5
+1 universe size 5
+2 universe size 5
+orig orth hb_deg_1 mm_deg_1 count 4
+orig orth hb_deg_1 sb_deg_1 count 2
+orig orth mm_deg_1 sb_deg_1 count 2
+deg pair 0: 0 0 0 0 1 1 1 2 2 2 
+deg pair 1: 0 0 0 0 0 0 0 0 0 2 
+deg pair 2: 0 0 0 0 0 0 0 1 1 1 
