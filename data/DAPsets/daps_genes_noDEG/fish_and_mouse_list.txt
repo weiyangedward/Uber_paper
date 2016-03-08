@@ -1,0 +1,8 @@
+mm_daps_a_120.txt.uniqGene
+mm_daps_a_30.txt.uniqGene
+mm_daps_fc_120.txt.uniqGene
+mm_daps_fc_30.txt.uniqGene
+mm_daps_h_120.txt.uniqGene
+mm_daps_h_30.txt.uniqGene
+sb_daps_d_120.txt.uniqGene
+sb_daps_d_30.txt.uniqGene

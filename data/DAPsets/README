@@ -1,0 +1,5 @@
+## ./daps_genes_noDEG:
+This dir does not contain DEG filtered DAP sets
+
+## ./daps_genes_DEG:
+This dir contains DEG (DEG genes not expressed are excluded) filtered DAP sets
