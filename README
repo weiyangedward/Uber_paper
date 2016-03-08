@@ -1,4 +1,14 @@
 /data:
-	1) DEGsets for hb, mm, and sb. They are prefixed by species ID (mm = mouse, sb = stickleback, and hb = honeybee), an underscore, their region (mouse: A = amygdala, FC = frontal cortex, H = hypothalamus; stickleback: D = diencephalon, T = telencephalon; honeybee: MB = mushroom body), their time point after social challenge (30 = 30 minutes, 60 = 60 minutes, 120 = 120 minutes), and whether they are up or down in challenged animals compared to control.
+	1) DEGsets for hb, mm, and sb. They are prefixed by species ID (mm = mouse, sb = stickleback, and hb = honeybee), an underscore, their region (mouse: A = amygdala, FC = frontal cortex, H = hypothalamus; stickleback: D = diencephalon, T = telencephalon; honeybee: MB = mushroom body), their time point after social challenge (30 = 30 minutes, 60 = 60 minutes, 120 = 120 minutes), and whether they 
+	are up or down in challenged animals compared to control.
+		a) negative control for DEG enrichment analysis. Random sample the same amount of genes from universe, and redo the enridchment analysis. The result should be roughly uniformly distributed. 
 	2) OrthGroups for hb, mm, and sb. They are many-to-many mappings.
 	3) Enrichment test on ortholog strength of each pair of DEG between two spes will be using data in this dir.
+
+## To mount:
+1. igb
+sshfs weiyang4@biocluster.igb.uiuc.edu:/home/n-z/weiyang4/simons/Wei/ ./vm_igb  -ocache=no -onolocalcaches -ovolname=vm_igb
+
+2. hal
+sshfs weiyang4@hal9000-sched.cs.illinois.edu:/home/weiyang4/project/Uber_paper vm_hal -ocache=no -onolocalcaches -ovolname=vm_hal
+
