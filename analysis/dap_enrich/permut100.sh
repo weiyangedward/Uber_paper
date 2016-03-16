@@ -1,0 +1,1 @@
+../../code/degEnrich/degEnrich ../../data/DAPsets/daps_genes_noDEG/fish_and_mouse ../../data/DAPsets/daps_genes_noDEG/fish_and_mouse_list.txt ../../data/OrthGroups/orthodb_triplets.txt ../../data/UniverseGene/hb_mrsb_no_DWV_cor_uniq.txt ../../data/UniverseGene/mm_mrsb_A_cor_test.txt ../../data/UniverseGene/sb_mrsb_D_cor_uniq.txt 100 2>log_100 > out_100
